@@ -1,0 +1,20 @@
+name: esg-score-explorer
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - streamlit
+  - pandas
+  - numpy
+  - plotly
+  - altair
+  - yfinance
+  - python-dotenv
+  - pycountry
+  - requests
+  - beautifulsoup4
+  - statsmodels
+  - pip:
+    - kaggle
