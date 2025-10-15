@@ -1,3 +1,10 @@
+.venv/
+venv/
+.env
+__pycache__/
+.DS_Store
+.pytest_cache/
+.streamlit/secrets.toml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

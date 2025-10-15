@@ -1,0 +1,12 @@
+streamlit>=1.22
+pandas>=2.1
+numpy>=1.25
+plotly>=5.14
+altair>=5.0
+yfinance>=0.2
+python-dotenv>=1.0
+pycountry>=22.3
+kaggle>=1.5
+requests>=2.31
+beautifulsoup4>=4.12
+statsmodels>=0.14
