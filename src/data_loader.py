@@ -44,37 +44,15 @@ ALLOWED_SECTORS = [
 
 
 @st.cache_data
-def load_dataset(cfg: Dict) -> Optional[pd.DataFrame]:
-    """Load dataset based on sidebar config.
-
-    cfg: dict with keys dataset (Demo/From file/Kaggle) and file uploader path
+def load_dataset() -> Optional[pd.DataFrame]:
+    """Load dataset.
     """
-    dataset = cfg.get("dataset")
-    if dataset == "Demo (dummy data)":
-        path = os.path.join("data", "processed", "esg_demo.csv")
-        if not os.path.exists(path):
-            st.warning(f"Demo data not found at {path}. Run `make dummy-data` to generate it.")
-            return pd.DataFrame()
-        df = pd.read_csv(path)
-        return df
-
-    if dataset == "Kaggle ESG (raw)":
-        path = os.path.join("data", "raw", "kaggle_esg.csv")
-        if not os.path.exists(path):
-            st.warning(f"Kaggle raw file not found at {path}. Run `make fetch-kaggle` to download it.")
-            return pd.DataFrame()
-        return pd.read_csv(path)
-
-    # From file
-    upload = cfg.get("upload")
-    if upload is not None:
-        try:
-            return pd.read_csv(upload)
-        except Exception as e:
-            st.error(f"Failed to read uploaded file: {e}")
-            return pd.DataFrame()
-
-    return pd.DataFrame()
+    path = os.path.join("data", "processed", "esg_real.csv")
+    if not os.path.exists(path):
+        st.warning(f"Demo data not found at {path}. Run `make dummy-data` to generate it.")
+        return pd.DataFrame()
+    df = pd.read_csv(path)
+    return df
 
 
 def preprocess(df: pd.DataFrame) -> pd.DataFrame:

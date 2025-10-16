@@ -1,6 +1,21 @@
 [theme]
-primaryColor = "#0A84FF"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F2F6"
-textColor = "#0F172A"
-font = "system"
+# Professional dark theme with ESG-inspired color scheme
+primaryColor = "#00C853"  # Green for ESG/sustainability
+backgroundColor = "#0A1929"  # Dark blue-gray background
+secondaryBackgroundColor = "#132F4C"  # Slightly lighter blue-gray
+textColor = "#F8F9FA"  # Light gray text
+font = "sans serif"  # Clean, modern font
+
+[server]
+enableXsrfProtection = true
+enableCORS = false
+
+[browser]
+gatherUsageStats = false
+
+[global]
+# Consistent colors for ESG components
+# These can be referenced in charts.py
+env_color = "#00C853"  # Environmental - Green
+social_color = "#2196F3"  # Social - Blue
+gov_color = "#FFC107"  # Governance - Amber
