@@ -18,3 +18,4 @@ dependencies:
   - statsmodels
   - pip:
     - kaggle
+    - pycountry
