@@ -12,10 +12,3 @@ enableCORS = false
 
 [browser]
 gatherUsageStats = false
-
-[global]
-# Consistent colors for ESG components
-# These can be referenced in charts.py
-env_color = "#00C853"  # Environmental - Green
-social_color = "#2196F3"  # Social - Blue
-gov_color = "#FFC107"  # Governance - Amber
